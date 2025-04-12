@@ -61,33 +61,22 @@ jobs:
     - name: Run performance tests
       run: ./test_ranges.sh
       
-    - name: Create summary of system information
+    - name: Add system information to README
       run: |
-        echo "## Test Environment" > system_info.md
-        echo "- Date: $(date)" >> system_info.md
-        echo "- CPU Model: $(grep 'model name' /proc/cpuinfo | head -n1 | cut -d':' -f2 | xargs)" >> system_info.md
-        echo "- CPU Cores: $(grep -c processor /proc/cpuinfo)" >> system_info.md
-        echo "- Memory: $(free -h | awk '/^Mem:/ {print $2}')" >> system_info.md
-        echo "- OS: $(lsb_release -ds)" >> system_info.md
-        echo "- Kernel: $(uname -r)" >> system_info.md
-        echo "- Optimal block size: $(cat optimal_block_size.txt) bytes" >> system_info.md
-    
-    - name: Update README with system info
-      run: |
-        # Extract the performance table from README.md
-        sed -n '/^## Performance Summary/,/^$/p' README.md > perf_table.md
+        # Get the current system information
+        SYSTEM_INFO=$(cat << 'EOF'
+        - Date: $(date)
+        - CPU Model: $(grep 'model name' /proc/cpuinfo | head -n1 | cut -d':' -f2 | xargs)
+        - CPU Cores: $(grep -c processor /proc/cpuinfo)
+        - Memory: $(free -h | awk '/^Mem:/ {print $2}')
+        - OS: $(lsb_release -ds)
+        - Kernel: $(uname -r)
+        - Optimal block size: $(cat optimal_block_size.txt) bytes
+        EOF
+        )
         
-        # Combine system info with performance table
-        cat system_info.md perf_table.md > new_readme.md
-        
-        # Add implementation notes from old README
-        sed -n '/^## Implementation Notes/,$p' README.md >> new_readme.md
-        
-        # Replace README with new content
-        mv new_readme.md README.md
-        
-        # Clean up temporary files
-        rm -f perf_table.md system_info.md
+        # Insert system information after the System Specification section
+        sed -i "/^## Cache-Optimized Block Size/i $SYSTEM_INFO" README.md
     
     - name: Commit files
       run: |
