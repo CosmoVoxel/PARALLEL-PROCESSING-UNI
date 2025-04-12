@@ -1,3 +1,5 @@
+[![.github/workflows/update-metrics.yml](https://github.com/CosmoVoxel/PARALLEL-PROCESSING-UNI/actions/workflows/update-metrics.yml/badge.svg)](https://github.com/CosmoVoxel/PARALLEL-PROCESSING-UNI/actions/workflows/update-metrics.yml)
+
 ## Test Environment
 - Date: Sat Apr 12 18:13:40 UTC 2025
 - CPU Model: AMD EPYC 7763 64-Core Processor
