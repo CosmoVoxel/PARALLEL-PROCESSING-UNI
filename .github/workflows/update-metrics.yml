@@ -37,11 +37,11 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         # Ensure we fetch complete history for proper commits
         fetch-depth: 0
-    
+            
     - name: Install dependencies
       run: |
         sudo apt-get update
@@ -88,17 +88,16 @@ jobs:
         
         # Clean up temporary files
         rm -f perf_table.md system_info.md
-        
-    - name: Commit changes
+    
+    - name: Commit files
       run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        
-        # Check if there are changes to commit
-        if [ -n "$(git status --porcelain)" ]; then
-          git add README.md range_results.txt block_size_results.txt optimal_block_size.txt
-          git commit -m "Update performance metrics [skip ci]"
-          git push
-        else
-          echo "No changes to commit"
-        fi
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add README.md range_results.txt block_size_results.txt optimal_block_size.txt
+        git commit -m "Update performance metrics [skip ci]"
+    
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
