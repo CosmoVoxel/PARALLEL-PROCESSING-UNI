@@ -7,9 +7,17 @@
 
 // The results are correct 
 // Time measure : (2 max)  0.832697 s; (max/2 max)  0.379347 s (2 max/2)  0.372242 s
-int main() {
+int main(int argc, char *argv[]) {
     int m = 2;
-    int n = 50000000;
+    int n = 100000000; // Default values
+
+    // Parse command line arguments if provided
+    if (argc >= 2) {
+        m = atoi(argv[1]);
+    }
+    if (argc >= 3) {
+        n = atoi(argv[2]);
+    }
 
     int size = n - m + 1;
 
@@ -62,6 +70,8 @@ int main() {
     
     printf("Found %d primes in the range [%d, %d]\n", primeCount, m, n);
     printf("Time taken to find primes: %f seconds\n", timeTaken);
+    printf("Performance: %.3f Mnums/sec\n", (double)size / timeTaken / 1000000);
+    
     // Free allocated memory
     free(result);
     free(primeArray);
