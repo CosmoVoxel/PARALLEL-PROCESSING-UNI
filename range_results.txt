@@ -1,154 +1,155 @@
 # Performance Results for Different Ranges
 MAX = 100000000
 # Each result is an average of 10 runs
+# Optimal block size: 524288
 
 ## Range [2, 100000000]
 
 ### prime1
 Running 10 times for range [2, 100000000]...
-   Run 1/10: 117.833 Mnums/sec   Run 2/10: 114.936 Mnums/sec   Run 3/10: 112.860 Mnums/sec   Run 4/10: 105.942 Mnums/sec   Run 5/10: 109.862 Mnums/sec   Run 6/10: 117.223 Mnums/sec   Run 7/10: 117.834 Mnums/sec   Run 8/10: 118.582 Mnums/sec   Run 9/10: 117.253 Mnums/sec   Run 10/10: 103.791 Mnums/sec
-   Average of 10 runs: 113.611 Mnums/sec (.882026 seconds)
+   Run 1/10: 108.227 Mnums/sec   Run 2/10: 111.989 Mnums/sec   Run 3/10: 109.756 Mnums/sec   Run 4/10: 107.766 Mnums/sec   Run 5/10: 109.010 Mnums/sec   Run 6/10: 112.062 Mnums/sec   Run 7/10: 109.885 Mnums/sec   Run 8/10: 105.070 Mnums/sec   Run 9/10: 92.201 Mnums/sec   Run 10/10: 105.928 Mnums/sec
+   Average of 10 runs: 107.189 Mnums/sec (.935609 seconds)
 Found 5761455 primes in the range [2, 100000000]
-Time taken: .882026 seconds (average of 10 runs)
-Performance: 113.611 Mnums/sec (average of 10 runs)
+Time taken: .935609 seconds (average of 10 runs)
+Performance: 107.189 Mnums/sec (average of 10 runs)
 
 ### prime3
 Running 10 times for range [2, 100000000]...
-   Run 1/10: 104.283 Mnums/sec   Run 2/10: 112.006 Mnums/sec   Run 3/10: 109.004 Mnums/sec   Run 4/10: 108.126 Mnums/sec   Run 5/10: 109.858 Mnums/sec   Run 6/10: 108.711 Mnums/sec   Run 7/10: 117.141 Mnums/sec   Run 8/10: 120.186 Mnums/sec   Run 9/10: 117.445 Mnums/sec   Run 10/10: 120.179 Mnums/sec
-   Average of 10 runs: 112.693 Mnums/sec (.889338 seconds)
+   Run 1/10: 106.459 Mnums/sec   Run 2/10: 106.908 Mnums/sec   Run 3/10: 108.207 Mnums/sec   Run 4/10: 93.641 Mnums/sec   Run 5/10: 99.004 Mnums/sec   Run 6/10: 96.847 Mnums/sec   Run 7/10: 92.557 Mnums/sec   Run 8/10: 97.681 Mnums/sec   Run 9/10: 95.348 Mnums/sec   Run 10/10: 96.185 Mnums/sec
+   Average of 10 runs: 99.283 Mnums/sec (1.010202 seconds)
 Found 5761455 primes in the range [2, 100000000]
-Time taken: .889338 seconds (average of 10 runs)
-Performance: 112.693 Mnums/sec (average of 10 runs)
-
-### prime3a
-Running 10 times for range [2, 100000000]...
-   Run 1/10: 172.334 Mnums/sec   Run 2/10: 175.180 Mnums/sec   Run 3/10: 179.623 Mnums/sec   Run 4/10: 181.067 Mnums/sec   Run 5/10: 180.464 Mnums/sec   Run 6/10: 180.020 Mnums/sec   Run 7/10: 180.876 Mnums/sec   Run 8/10: 180.377 Mnums/sec   Run 9/10: 179.817 Mnums/sec   Run 10/10: 180.636 Mnums/sec
-   Average of 10 runs: 179.039 Mnums/sec (.558671 seconds)
-Found 5761455 primes in the range [2, 100000000]
-Time taken: .558671 seconds (average of 10 runs)
-Performance: 179.039 Mnums/sec (average of 10 runs)
+Time taken: 1.010202 seconds (average of 10 runs)
+Performance: 99.283 Mnums/sec (average of 10 runs)
 
 ### prime4
 Running 10 times for range [2, 100000000]...
-   Run 1/10: 25.660 Mnums/sec   Run 2/10: 23.417 Mnums/sec   Run 3/10: 25.507 Mnums/sec   Run 4/10: 30.627 Mnums/sec   Run 5/10: 23.591 Mnums/sec   Run 6/10: 22.840 Mnums/sec   Run 7/10: 24.716 Mnums/sec   Run 8/10: 22.962 Mnums/sec   Run 9/10: 25.638 Mnums/sec   Run 10/10: 24.982 Mnums/sec
-   Average of 10 runs: 24.994 Mnums/sec (4.027478 seconds)
+   Run 1/10: 20.073 Mnums/sec   Run 2/10: 18.383 Mnums/sec   Run 3/10: 18.872 Mnums/sec   Run 4/10: 18.314 Mnums/sec   Run 5/10: 19.331 Mnums/sec   Run 6/10: 18.553 Mnums/sec   Run 7/10: 19.027 Mnums/sec   Run 8/10: 19.853 Mnums/sec   Run 9/10: 18.664 Mnums/sec   Run 10/10: 19.355 Mnums/sec
+   Average of 10 runs: 19.042 Mnums/sec (5.256132 seconds)
 Found 5761455 primes in the range [2, 100000000]
-Time taken: 4.027478 seconds (average of 10 runs)
-Performance: 24.994 Mnums/sec (average of 10 runs)
+Time taken: 5.256132 seconds (average of 10 runs)
+Performance: 19.042 Mnums/sec (average of 10 runs)
 
 ### prime4a
 Running 10 times for range [2, 100000000]...
-   Run 1/10: 32.382 Mnums/sec   Run 2/10: 32.691 Mnums/sec   Run 3/10: 30.962 Mnums/sec   Run 4/10: 34.454 Mnums/sec   Run 5/10: 33.876 Mnums/sec   Run 6/10: 33.242 Mnums/sec   Run 7/10: 35.278 Mnums/sec   Run 8/10: 34.219 Mnums/sec   Run 9/10: 36.812 Mnums/sec   Run 10/10: 33.410 Mnums/sec
-   Average of 10 runs: 33.732 Mnums/sec (2.970606 seconds)
+   Run 1/10: 21.626 Mnums/sec   Run 2/10: 22.862 Mnums/sec   Run 3/10: 27.465 Mnums/sec   Run 4/10: 27.226 Mnums/sec   Run 5/10: 25.956 Mnums/sec   Run 6/10: 24.361 Mnums/sec   Run 7/10: 27.268 Mnums/sec   Run 8/10: 21.873 Mnums/sec   Run 9/10: 23.476 Mnums/sec   Run 10/10: 23.305 Mnums/sec
+   Average of 10 runs: 24.541 Mnums/sec (4.105964 seconds)
 Found 5761455 primes in the range [2, 100000000]
-Time taken: 2.970606 seconds (average of 10 runs)
-Performance: 33.732 Mnums/sec (average of 10 runs)
+Time taken: 4.105964 seconds (average of 10 runs)
+Performance: 24.541 Mnums/sec (average of 10 runs)
+
+### prime3a
+Running 10 times for range [2, 100000000] with block size 524288...
+   Run 1/10: 160.823 Mnums/sec   Run 2/10: 151.750 Mnums/sec   Run 3/10: 171.094 Mnums/sec   Run 4/10: 172.508 Mnums/sec   Run 5/10: 174.248 Mnums/sec   Run 6/10: 172.083 Mnums/sec   Run 7/10: 170.823 Mnums/sec   Run 8/10: 173.077 Mnums/sec   Run 9/10: 175.896 Mnums/sec   Run 10/10: 174.381 Mnums/sec
+   Average of 10 runs: 169.668 Mnums/sec (.590509 seconds)
+Found 5761455 primes in the range [2, 100000000]
+Time taken: .590509 seconds (average of 10 runs)
+Performance: 169.668 Mnums/sec (average of 10 runs)
 
 ### prime5
-Running 10 times for range [2, 100000000]...
-   Run 1/10: 146.203 Mnums/sec   Run 2/10: 148.968 Mnums/sec   Run 3/10: 162.177 Mnums/sec   Run 4/10: 157.615 Mnums/sec   Run 5/10: 140.505 Mnums/sec   Run 6/10: 181.141 Mnums/sec   Run 7/10: 159.930 Mnums/sec   Run 8/10: 161.252 Mnums/sec   Run 9/10: 171.150 Mnums/sec   Run 10/10: 166.452 Mnums/sec
-   Average of 10 runs: 159.539 Mnums/sec (.630058 seconds)
+Running 10 times for range [2, 100000000] with block size 524288...
+   Run 1/10: 129.004 Mnums/sec   Run 2/10: 113.308 Mnums/sec   Run 3/10: 141.984 Mnums/sec   Run 4/10: 126.013 Mnums/sec   Run 5/10: 114.150 Mnums/sec   Run 6/10: 129.518 Mnums/sec   Run 7/10: 143.558 Mnums/sec   Run 8/10: 148.345 Mnums/sec   Run 9/10: 106.089 Mnums/sec   Run 10/10: 149.520 Mnums/sec
+   Average of 10 runs: 130.148 Mnums/sec (.778582 seconds)
 Found 5761455 primes in the range [2, 100000000]
-Time taken: .630058 seconds (average of 10 runs)
-Performance: 159.539 Mnums/sec (average of 10 runs)
+Time taken: .778582 seconds (average of 10 runs)
+Performance: 130.148 Mnums/sec (average of 10 runs)
 
 ## Range [50000001, 100000000]
 
 ### prime1
 Running 10 times for range [50000001, 100000000]...
-   Run 1/10: 106.483 Mnums/sec   Run 2/10: 108.647 Mnums/sec   Run 3/10: 108.651 Mnums/sec   Run 4/10: 109.742 Mnums/sec   Run 5/10: 109.799 Mnums/sec   Run 6/10: 107.930 Mnums/sec   Run 7/10: 109.432 Mnums/sec   Run 8/10: 110.617 Mnums/sec   Run 9/10: 110.489 Mnums/sec   Run 10/10: 110.169 Mnums/sec
-   Average of 10 runs: 109.195 Mnums/sec (.457950 seconds)
+   Run 1/10: 99.983 Mnums/sec   Run 2/10: 107.272 Mnums/sec   Run 3/10: 109.027 Mnums/sec   Run 4/10: 101.330 Mnums/sec   Run 5/10: 94.453 Mnums/sec   Run 6/10: 95.923 Mnums/sec   Run 7/10: 93.794 Mnums/sec   Run 8/10: 99.428 Mnums/sec   Run 9/10: 96.074 Mnums/sec   Run 10/10: 94.197 Mnums/sec
+   Average of 10 runs: 99.148 Mnums/sec (.505603 seconds)
 Found 2760321 primes in the range [50000001, 100000000]
-Time taken: .457950 seconds (average of 10 runs)
-Performance: 109.195 Mnums/sec (average of 10 runs)
+Time taken: .505603 seconds (average of 10 runs)
+Performance: 99.148 Mnums/sec (average of 10 runs)
 
 ### prime3
 Running 10 times for range [50000001, 100000000]...
-   Run 1/10: 118.541 Mnums/sec   Run 2/10: 109.542 Mnums/sec   Run 3/10: 107.300 Mnums/sec   Run 4/10: 104.807 Mnums/sec   Run 5/10: 107.765 Mnums/sec   Run 6/10: 96.208 Mnums/sec   Run 7/10: 88.661 Mnums/sec   Run 8/10: 94.174 Mnums/sec   Run 9/10: 97.272 Mnums/sec   Run 10/10: 103.886 Mnums/sec
-   Average of 10 runs: 102.815 Mnums/sec (.489516 seconds)
+   Run 1/10: 89.591 Mnums/sec   Run 2/10: 96.360 Mnums/sec   Run 3/10: 100.326 Mnums/sec   Run 4/10: 93.016 Mnums/sec   Run 5/10: 95.484 Mnums/sec   Run 6/10: 91.932 Mnums/sec   Run 7/10: 89.506 Mnums/sec   Run 8/10: 95.075 Mnums/sec   Run 9/10: 96.611 Mnums/sec   Run 10/10: 97.633 Mnums/sec
+   Average of 10 runs: 94.553 Mnums/sec (.529461 seconds)
 Found 2760321 primes in the range [50000001, 100000000]
-Time taken: .489516 seconds (average of 10 runs)
-Performance: 102.815 Mnums/sec (average of 10 runs)
-
-### prime3a
-Running 10 times for range [50000001, 100000000]...
-   Run 1/10: 172.403 Mnums/sec   Run 2/10: 167.957 Mnums/sec   Run 3/10: 169.435 Mnums/sec   Run 4/10: 166.053 Mnums/sec   Run 5/10: 171.090 Mnums/sec   Run 6/10: 170.534 Mnums/sec   Run 7/10: 172.212 Mnums/sec   Run 8/10: 167.663 Mnums/sec   Run 9/10: 165.205 Mnums/sec   Run 10/10: 168.999 Mnums/sec
-   Average of 10 runs: 169.155 Mnums/sec (.295642 seconds)
-Found 2760321 primes in the range [50000001, 100000000]
-Time taken: .295642 seconds (average of 10 runs)
-Performance: 169.155 Mnums/sec (average of 10 runs)
+Time taken: .529461 seconds (average of 10 runs)
+Performance: 94.553 Mnums/sec (average of 10 runs)
 
 ### prime4
 Running 10 times for range [50000001, 100000000]...
-   Run 1/10: 26.548 Mnums/sec   Run 2/10: 27.041 Mnums/sec   Run 3/10: 25.641 Mnums/sec   Run 4/10: 24.761 Mnums/sec   Run 5/10: 29.912 Mnums/sec   Run 6/10: 23.052 Mnums/sec   Run 7/10: 22.443 Mnums/sec   Run 8/10: 23.727 Mnums/sec   Run 9/10: 24.349 Mnums/sec   Run 10/10: 20.896 Mnums/sec
-   Average of 10 runs: 24.837 Mnums/sec (2.032366 seconds)
+   Run 1/10: 20.270 Mnums/sec   Run 2/10: 20.073 Mnums/sec   Run 3/10: 20.686 Mnums/sec   Run 4/10: 21.683 Mnums/sec   Run 5/10: 22.683 Mnums/sec   Run 6/10: 21.857 Mnums/sec   Run 7/10: 24.121 Mnums/sec   Run 8/10: 22.885 Mnums/sec   Run 9/10: 21.590 Mnums/sec   Run 10/10: 25.247 Mnums/sec
+   Average of 10 runs: 22.109 Mnums/sec (2.272670 seconds)
 Found 2760321 primes in the range [50000001, 100000000]
-Time taken: 2.032366 seconds (average of 10 runs)
-Performance: 24.837 Mnums/sec (average of 10 runs)
+Time taken: 2.272670 seconds (average of 10 runs)
+Performance: 22.109 Mnums/sec (average of 10 runs)
 
 ### prime4a
 Running 10 times for range [50000001, 100000000]...
-   Run 1/10: 29.784 Mnums/sec   Run 2/10: 27.520 Mnums/sec   Run 3/10: 29.003 Mnums/sec   Run 4/10: 24.715 Mnums/sec   Run 5/10: 28.689 Mnums/sec   Run 6/10: 28.268 Mnums/sec   Run 7/10: 32.417 Mnums/sec   Run 8/10: 32.067 Mnums/sec   Run 9/10: 29.180 Mnums/sec   Run 10/10: 31.706 Mnums/sec
-   Average of 10 runs: 29.334 Mnums/sec (1.714649 seconds)
+   Run 1/10: 28.534 Mnums/sec   Run 2/10: 30.466 Mnums/sec   Run 3/10: 30.351 Mnums/sec   Run 4/10: 29.274 Mnums/sec   Run 5/10: 29.303 Mnums/sec   Run 6/10: 31.736 Mnums/sec   Run 7/10: 31.614 Mnums/sec   Run 8/10: 30.528 Mnums/sec   Run 9/10: 31.758 Mnums/sec   Run 10/10: 31.982 Mnums/sec
+   Average of 10 runs: 30.554 Mnums/sec (1.638786 seconds)
 Found 2760321 primes in the range [50000001, 100000000]
-Time taken: 1.714649 seconds (average of 10 runs)
-Performance: 29.334 Mnums/sec (average of 10 runs)
+Time taken: 1.638786 seconds (average of 10 runs)
+Performance: 30.554 Mnums/sec (average of 10 runs)
+
+### prime3a
+Running 10 times for range [50000001, 100000000] with block size 524288...
+   Run 1/10: 175.652 Mnums/sec   Run 2/10: 170.414 Mnums/sec   Run 3/10: 167.148 Mnums/sec   Run 4/10: 162.268 Mnums/sec   Run 5/10: 163.079 Mnums/sec   Run 6/10: 165.136 Mnums/sec   Run 7/10: 165.847 Mnums/sec   Run 8/10: 168.721 Mnums/sec   Run 9/10: 156.192 Mnums/sec   Run 10/10: 169.729 Mnums/sec
+   Average of 10 runs: 166.418 Mnums/sec (.300724 seconds)
+Found 2760321 primes in the range [50000001, 100000000]
+Time taken: .300724 seconds (average of 10 runs)
+Performance: 166.418 Mnums/sec (average of 10 runs)
 
 ### prime5
-Running 10 times for range [50000001, 100000000]...
-   Run 1/10: 126.516 Mnums/sec   Run 2/10: 138.321 Mnums/sec   Run 3/10: 184.831 Mnums/sec   Run 4/10: 154.183 Mnums/sec   Run 5/10: 177.497 Mnums/sec   Run 6/10: 191.511 Mnums/sec   Run 7/10: 148.969 Mnums/sec   Run 8/10: 167.275 Mnums/sec   Run 9/10: 157.957 Mnums/sec   Run 10/10: 116.807 Mnums/sec
-   Average of 10 runs: 156.386 Mnums/sec (.327341 seconds)
+Running 10 times for range [50000001, 100000000] with block size 524288...
+   Run 1/10: 139.104 Mnums/sec   Run 2/10: 137.465 Mnums/sec   Run 3/10: 130.244 Mnums/sec   Run 4/10: 107.288 Mnums/sec   Run 5/10: 169.727 Mnums/sec   Run 6/10: 150.536 Mnums/sec   Run 7/10: 118.565 Mnums/sec   Run 8/10: 99.957 Mnums/sec   Run 9/10: 144.686 Mnums/sec   Run 10/10: 89.793 Mnums/sec
+   Average of 10 runs: 128.736 Mnums/sec (.402417 seconds)
 Found 2760321 primes in the range [50000001, 100000000]
-Time taken: .327341 seconds (average of 10 runs)
-Performance: 156.386 Mnums/sec (average of 10 runs)
+Time taken: .402417 seconds (average of 10 runs)
+Performance: 128.736 Mnums/sec (average of 10 runs)
 
 ## Range [2, 50000000]
 
 ### prime1
 Running 10 times for range [2, 50000000]...
-   Run 1/10: 122.624 Mnums/sec   Run 2/10: 120.003 Mnums/sec   Run 3/10: 120.538 Mnums/sec   Run 4/10: 119.624 Mnums/sec   Run 5/10: 116.059 Mnums/sec   Run 6/10: 106.811 Mnums/sec   Run 7/10: 111.635 Mnums/sec   Run 8/10: 102.331 Mnums/sec   Run 9/10: 98.904 Mnums/sec   Run 10/10: 114.124 Mnums/sec
-   Average of 10 runs: 113.265 Mnums/sec (.443629 seconds)
+   Run 1/10: 93.739 Mnums/sec   Run 2/10: 100.056 Mnums/sec   Run 3/10: 90.451 Mnums/sec   Run 4/10: 100.188 Mnums/sec   Run 5/10: 94.022 Mnums/sec   Run 6/10: 104.989 Mnums/sec   Run 7/10: 105.884 Mnums/sec   Run 8/10: 105.504 Mnums/sec   Run 9/10: 102.223 Mnums/sec   Run 10/10: 108.096 Mnums/sec
+   Average of 10 runs: 100.515 Mnums/sec (.499080 seconds)
 Found 3001134 primes in the range [2, 50000000]
-Time taken: .443629 seconds (average of 10 runs)
-Performance: 113.265 Mnums/sec (average of 10 runs)
+Time taken: .499080 seconds (average of 10 runs)
+Performance: 100.515 Mnums/sec (average of 10 runs)
 
 ### prime3
 Running 10 times for range [2, 50000000]...
-   Run 1/10: 119.211 Mnums/sec   Run 2/10: 117.435 Mnums/sec   Run 3/10: 121.830 Mnums/sec   Run 4/10: 118.882 Mnums/sec   Run 5/10: 111.686 Mnums/sec   Run 6/10: 113.296 Mnums/sec   Run 7/10: 115.763 Mnums/sec   Run 8/10: 113.874 Mnums/sec   Run 9/10: 114.032 Mnums/sec   Run 10/10: 107.683 Mnums/sec
-   Average of 10 runs: 115.369 Mnums/sec (.433898 seconds)
+   Run 1/10: 101.586 Mnums/sec   Run 2/10: 108.928 Mnums/sec   Run 3/10: 104.458 Mnums/sec   Run 4/10: 105.140 Mnums/sec   Run 5/10: 105.052 Mnums/sec   Run 6/10: 104.017 Mnums/sec   Run 7/10: 111.368 Mnums/sec   Run 8/10: 111.983 Mnums/sec   Run 9/10: 112.707 Mnums/sec   Run 10/10: 116.254 Mnums/sec
+   Average of 10 runs: 108.149 Mnums/sec (.463125 seconds)
 Found 3001134 primes in the range [2, 50000000]
-Time taken: .433898 seconds (average of 10 runs)
-Performance: 115.369 Mnums/sec (average of 10 runs)
-
-### prime3a
-Running 10 times for range [2, 50000000]...
-   Run 1/10: 170.426 Mnums/sec   Run 2/10: 176.095 Mnums/sec   Run 3/10: 180.304 Mnums/sec   Run 4/10: 179.804 Mnums/sec   Run 5/10: 179.460 Mnums/sec   Run 6/10: 175.081 Mnums/sec   Run 7/10: 176.061 Mnums/sec   Run 8/10: 175.804 Mnums/sec   Run 9/10: 176.258 Mnums/sec   Run 10/10: 175.389 Mnums/sec
-   Average of 10 runs: 176.468 Mnums/sec (.283405 seconds)
-Found 3001134 primes in the range [2, 50000000]
-Time taken: .283405 seconds (average of 10 runs)
-Performance: 176.468 Mnums/sec (average of 10 runs)
+Time taken: .463125 seconds (average of 10 runs)
+Performance: 108.149 Mnums/sec (average of 10 runs)
 
 ### prime4
 Running 10 times for range [2, 50000000]...
-   Run 1/10: 26.269 Mnums/sec   Run 2/10: 25.934 Mnums/sec   Run 3/10: 25.284 Mnums/sec   Run 4/10: 27.657 Mnums/sec   Run 5/10: 30.121 Mnums/sec   Run 6/10: 32.262 Mnums/sec   Run 7/10: 28.546 Mnums/sec   Run 8/10: 28.467 Mnums/sec   Run 9/10: 29.169 Mnums/sec   Run 10/10: 26.875 Mnums/sec
-   Average of 10 runs: 28.058 Mnums/sec (1.790922 seconds)
+   Run 1/10: 25.482 Mnums/sec   Run 2/10: 26.223 Mnums/sec   Run 3/10: 27.888 Mnums/sec   Run 4/10: 27.500 Mnums/sec   Run 5/10: 26.713 Mnums/sec   Run 6/10: 26.333 Mnums/sec   Run 7/10: 27.690 Mnums/sec   Run 8/10: 27.254 Mnums/sec   Run 9/10: 28.584 Mnums/sec   Run 10/10: 26.978 Mnums/sec
+   Average of 10 runs: 27.064 Mnums/sec (1.849338 seconds)
 Found 3001134 primes in the range [2, 50000000]
-Time taken: 1.790922 seconds (average of 10 runs)
-Performance: 28.058 Mnums/sec (average of 10 runs)
+Time taken: 1.849338 seconds (average of 10 runs)
+Performance: 27.064 Mnums/sec (average of 10 runs)
 
 ### prime4a
 Running 10 times for range [2, 50000000]...
-   Run 1/10: 34.167 Mnums/sec   Run 2/10: 36.744 Mnums/sec   Run 3/10: 34.426 Mnums/sec   Run 4/10: 30.842 Mnums/sec   Run 5/10: 31.732 Mnums/sec   Run 6/10: 32.301 Mnums/sec   Run 7/10: 33.280 Mnums/sec   Run 8/10: 23.935 Mnums/sec   Run 9/10: 28.473 Mnums/sec   Run 10/10: 24.011 Mnums/sec
-   Average of 10 runs: 30.991 Mnums/sec (1.645123 seconds)
+   Run 1/10: 36.218 Mnums/sec   Run 2/10: 28.186 Mnums/sec   Run 3/10: 37.757 Mnums/sec   Run 4/10: 33.580 Mnums/sec   Run 5/10: 36.254 Mnums/sec   Run 6/10: 35.165 Mnums/sec   Run 7/10: 35.073 Mnums/sec   Run 8/10: 34.499 Mnums/sec   Run 9/10: 33.734 Mnums/sec   Run 10/10: 35.432 Mnums/sec
+   Average of 10 runs: 34.589 Mnums/sec (1.453697 seconds)
 Found 3001134 primes in the range [2, 50000000]
-Time taken: 1.645123 seconds (average of 10 runs)
-Performance: 30.991 Mnums/sec (average of 10 runs)
+Time taken: 1.453697 seconds (average of 10 runs)
+Performance: 34.589 Mnums/sec (average of 10 runs)
+
+### prime3a
+Running 10 times for range [2, 50000000] with block size 524288...
+   Run 1/10: 181.178 Mnums/sec   Run 2/10: 178.521 Mnums/sec   Run 3/10: 181.366 Mnums/sec   Run 4/10: 176.553 Mnums/sec   Run 5/10: 181.441 Mnums/sec   Run 6/10: 181.128 Mnums/sec   Run 7/10: 181.220 Mnums/sec   Run 8/10: 181.821 Mnums/sec   Run 9/10: 181.254 Mnums/sec   Run 10/10: 182.761 Mnums/sec
+   Average of 10 runs: 180.724 Mnums/sec (.276689 seconds)
+Found 3001134 primes in the range [2, 50000000]
+Time taken: .276689 seconds (average of 10 runs)
+Performance: 180.724 Mnums/sec (average of 10 runs)
 
 ### prime5
-Running 10 times for range [2, 50000000]...
-   Run 1/10: 170.812 Mnums/sec   Run 2/10: 170.830 Mnums/sec   Run 3/10: 139.223 Mnums/sec   Run 4/10: 95.392 Mnums/sec   Run 5/10: 149.266 Mnums/sec   Run 6/10: 110.883 Mnums/sec   Run 7/10: 114.578 Mnums/sec   Run 8/10: 137.126 Mnums/sec   Run 9/10: 186.939 Mnums/sec   Run 10/10: 92.157 Mnums/sec
-   Average of 10 runs: 136.720 Mnums/sec (.386562 seconds)
+Running 10 times for range [2, 50000000] with block size 524288...
+   Run 1/10: 136.896 Mnums/sec   Run 2/10: 154.762 Mnums/sec   Run 3/10: 160.683 Mnums/sec   Run 4/10: 105.058 Mnums/sec   Run 5/10: 149.629 Mnums/sec   Run 6/10: 157.941 Mnums/sec   Run 7/10: 160.074 Mnums/sec   Run 8/10: 190.635 Mnums/sec   Run 9/10: 156.862 Mnums/sec   Run 10/10: 151.244 Mnums/sec
+   Average of 10 runs: 152.378 Mnums/sec (.335012 seconds)
 Found 3001134 primes in the range [2, 50000000]
-Time taken: .386562 seconds (average of 10 runs)
-Performance: 136.720 Mnums/sec (average of 10 runs)
+Time taken: .335012 seconds (average of 10 runs)
+Performance: 152.378 Mnums/sec (average of 10 runs)
 

@@ -222,16 +222,16 @@ echo "Generating summary table for README..."
     echo "Run the script \`find_optimal_blocksize.sh\` to determine the optimal block size for your CPU."
     echo "This script tests various block sizes and identifies which one provides the best performance."
     echo ""
-    echo "```bash"
+    echo '```bash'
     echo "./find_optimal_blocksize.sh"
-    echo "```"
+    echo '```'
     echo ""
     echo "### Running Tests with the Optimal Block Size"
     echo "The \`test_ranges.sh\` script automatically uses the optimal block size for block-based implementations."
     echo ""
-    echo "```bash"
+    echo '```bash'
     echo "./test_ranges.sh"
-    echo "```"
+    echo '```'
     
 } > "$DIR/README.md"
 
