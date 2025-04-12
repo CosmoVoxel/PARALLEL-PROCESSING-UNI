@@ -10,14 +10,18 @@ NUM_RUNS=10
 # Current directory
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+# Create build directory if it doesn't exist
+BUILD_DIR="$DIR/build"
+mkdir -p $BUILD_DIR
+
 # Compile all programs with OpenMP support
 echo "Compiling programs..."
-gcc -o $DIR/prime1 $DIR/prime1.c -lm
-gcc -o $DIR/prime3 $DIR/prime3.c -lm
-gcc -o $DIR/prime3a $DIR/prime3a.c -lm
-gcc -o $DIR/prime4 $DIR/prime4.c -lm -fopenmp
-gcc -o $DIR/prime4a $DIR/prime4a.c -lm -fopenmp
-gcc -o $DIR/prime5 $DIR/prime5.c -lm -fopenmp
+gcc -o $BUILD_DIR/prime1 $DIR/prime1.c -lm
+gcc -o $BUILD_DIR/prime3 $DIR/prime3.c -lm
+gcc -o $BUILD_DIR/prime3a $DIR/prime3a.c -lm
+gcc -o $BUILD_DIR/prime4 $DIR/prime4.c -lm -fopenmp
+gcc -o $BUILD_DIR/prime4a $DIR/prime4a.c -lm -fopenmp
+gcc -o $BUILD_DIR/prime5 $DIR/prime5.c -lm -fopenmp
 
 # Create results file
 OUTPUT_FILE="$DIR/range_results.txt"
@@ -69,7 +73,7 @@ run_multiple_times() {
     echo "Performance: $avg_perf Mnums/sec (average of $NUM_RUNS runs)"
 }
 
-# Run tests for first range [2, MAX]
+# Run tests for all ranges
 {
     echo "## Range [2, $MAX]"
     echo ""
@@ -77,7 +81,7 @@ run_multiple_times() {
     for prog in prime1 prime3 prime3a prime4 prime4a prime5; do
         echo "### $prog"
         echo "Running $NUM_RUNS times for range [2, $MAX]..."
-        output=$(run_multiple_times $DIR/$prog 2 $MAX)
+        output=$(run_multiple_times $BUILD_DIR/$prog 2 $MAX)
         echo "$output" >> $OUTPUT_FILE
         echo "" >> $OUTPUT_FILE
         
@@ -92,7 +96,7 @@ run_multiple_times() {
     for prog in prime1 prime3 prime3a prime4 prime4a prime5; do
         echo "### $prog"
         echo "Running $NUM_RUNS times for range [$(($HALF_MAX+1)), $MAX]..."
-        output=$(run_multiple_times $DIR/$prog $(($HALF_MAX+1)) $MAX)
+        output=$(run_multiple_times $BUILD_DIR/$prog $(($HALF_MAX+1)) $MAX)
         echo "$output" >> $OUTPUT_FILE
         echo "" >> $OUTPUT_FILE
         
@@ -107,7 +111,7 @@ run_multiple_times() {
     for prog in prime1 prime3 prime3a prime4 prime4a prime5; do
         echo "### $prog"
         echo "Running $NUM_RUNS times for range [2, $HALF_MAX]..."
-        output=$(run_multiple_times $DIR/$prog 2 $HALF_MAX)
+        output=$(run_multiple_times $BUILD_DIR/$prog 2 $HALF_MAX)
         echo "$output" >> $OUTPUT_FILE
         echo "" >> $OUTPUT_FILE
         
