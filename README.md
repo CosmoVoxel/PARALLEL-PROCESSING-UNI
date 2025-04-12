@@ -14,12 +14,12 @@ This was calculated by running performance tests across various block sizes alig
 
 | Implementation | [2, 100000000] | [50000001, 100000000] | [2, 50000000] |
 |----------------|-----------|--------------|-------------|
-| prime1 | 137.848 | 147.578 | 153.679 |
-| prime3 | 129.236 | 139.367 | 144.238 |
-| prime3a | 157.274 | 156.883 | 159.096 |
-| prime4 | 74.180 | 81.003 | 84.311 |
-| prime4a | 67.239 | 70.757 | 73.669 |
-| prime5 | 131.724 | 128.875 | 134.565 |
+| prime1 | 131.206 | 137.659 | 146.693 |
+| prime3 | 125.690 | 133.679 | 138.633 |
+| prime3a | 156.751 | 157.097 | 159.478 |
+| prime4 | 71.170 | 79.116 | 79.960 |
+| prime4a | 66.884 | 69.138 | 71.554 |
+| prime5 | 131.597 | 128.212 | 134.459 |
 
 ## Implementation Notes
 
@@ -44,3 +44,12 @@ The `test_ranges.sh` script automatically uses the optimal block size for block-
 ```bash
 ./test_ranges.sh
 ```
+## Test Environment
+- Date: Sat Apr 12 18:44:41 UTC 2025
+- CPU Model: AMD EPYC 7763 64-Core Processor
+- CPU Cores: 4
+- Memory: 15Gi
+- OS: Ubuntu 24.04.2 LTS
+- Kernel: 6.8.0-1021-azure
+- Optimal block size: 262144 bytes
+
