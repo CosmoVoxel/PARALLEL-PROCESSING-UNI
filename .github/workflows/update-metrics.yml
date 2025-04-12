@@ -63,20 +63,35 @@ jobs:
       
     - name: Add system information to README
       run: |
-        # Get the current system information
-        SYSTEM_INFO=$(cat << 'EOF'
-        - Date: $(date)
-        - CPU Model: $(grep 'model name' /proc/cpuinfo | head -n1 | cut -d':' -f2 | xargs)
-        - CPU Cores: $(grep -c processor /proc/cpuinfo)
-        - Memory: $(free -h | awk '/^Mem:/ {print $2}')
-        - OS: $(lsb_release -ds)
-        - Kernel: $(uname -r)
-        - Optimal block size: $(cat optimal_block_size.txt) bytes
-        EOF
-        )
+        # Create test environment section with current system info
+        cat > test_env.md << EOF
+## Test Environment
+- Date: $(date)
+- CPU Model: $(grep 'model name' /proc/cpuinfo | head -n1 | cut -d':' -f2 | xargs)
+- CPU Cores: $(grep -c processor /proc/cpuinfo)
+- Memory: $(free -h | awk '/^Mem:/ {print $2}')
+- OS: $(lsb_release -ds)
+- Kernel: $(uname -r)
+- Optimal block size: $(cat optimal_block_size.txt) bytes
+
+EOF
         
-        # Insert system information after the System Specification section
-        sed -i "/^## Cache-Optimized Block Size/i $SYSTEM_INFO" README.md
+        # Insert the test environment section into README.md at the right place
+        # First make a backup of README
+        cp README.md README.bak
+        
+        # Use awk to insert our test environment section
+        awk '
+          /^## Cache-Optimized Block Size/ { 
+            system("cat test_env.md");
+            print;
+            next;
+          }
+          { print }
+        ' README.bak > README.md
+        
+        # Clean up
+        rm test_env.md README.bak
     
     - name: Commit files
       run: |
