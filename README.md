@@ -1,15 +1,25 @@
-[![.github/workflows/update-metrics.yml](https://github.com/CosmoVoxel/PARALLEL-PROCESSING-UNI/actions/workflows/update-metrics.yml/badge.svg)](https://github.com/CosmoVoxel/PARALLEL-PROCESSING-UNI/actions/workflows/update-metrics.yml)
+# PARALLEL-PROCESSING-UNI
 
-## Test Environment
-- Date: Sat Apr 12 18:13:40 UTC 2025
-- CPU Model: AMD EPYC 7763 64-Core Processor
-- CPU Cores: 4
-- Memory: 15Gi
-- OS: Ubuntu 24.04.2 LTS
-- Kernel: 6.8.0-1021-azure
-- Optimal block size: 262144 bytes
+## System Specification
+- CPU: Intel Core i5-11400F
+- 6 cores, 12 threads
+- Base Frequency: 2.6 GHz, Turbo Boost up to 4.4 GHz
+
+## Cache-Optimized Block Size
+The optimal block size for this CPU was determined to be **262144 bytes**.
+This was calculated by running performance tests across various block sizes aligned with the CPU's cache hierarchy.
+
 ## Performance Summary (Mnums/sec)
 ### Each result is an average of 10 runs
+
+| Implementation | [2, 100000000] | [50000001, 100000000] | [2, 50000000] |
+|----------------|-----------|--------------|-------------|
+| prime1 | 137.848 | 147.578 | 153.679 |
+| prime3 | 129.236 | 139.367 | 144.238 |
+| prime3a | 157.274 | 156.883 | 159.096 |
+| prime4 | 74.180 | 81.003 | 84.311 |
+| prime4a | 67.239 | 70.757 | 73.669 |
+| prime5 | 131.724 | 128.875 | 134.565 |
 
 ## Implementation Notes
 
