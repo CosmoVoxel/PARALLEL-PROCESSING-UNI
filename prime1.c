@@ -42,13 +42,16 @@ int main() {
     }
     clock_t endTime = clock();
     double timeTaken = ((double)(endTime - startTime))/ CLOCKS_PER_SEC; 
-    // Print primes in [m, n]
-    printf("Primes between %d and %d:\n", m, n);
+    
+    // Count primes in [m, n] instead of printing them
+    int primeCount = 0;
     for (int i = 0; i < rangeSize; i++) {
         if (result[i] && (i + m) >= 2)
-            printf("%d ", i + m);
+            primeCount++;
     }
- printf("\nTime taken to find primes: %f seconds\n", timeTaken);
+    
+    printf("Found %d primes in the range [%d, %d]\n", primeCount, m, n);
+    printf("Time taken to find primes: %f seconds\n", timeTaken);
 
     // Clean up
     free(result);
