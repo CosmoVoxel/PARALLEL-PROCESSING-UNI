@@ -60,7 +60,23 @@ jobs:
     
     - name: Run performance tests
       run: ./test_ranges.sh
-    
+
+    - name: Create summary of system information
+      run: |
+        echo "## Test Environment" > system_info.md
+        echo "- Date: $(date)" >> system_info.md
+        echo "- CPU Model: $(grep 'model name' /proc/cpuinfo | head -n1 | cut -d':' -f2 | xargs)" >> system_info.md
+        echo "- CPU Cores: $(grep -c processor /proc/cpuinfo)" >> system_info.md
+        echo "- Memory: $(free -h | awk '/^Mem:/ {print $2}')" >> system_info.md
+        echo "- OS: $(lsb_release -ds)" >> system_info.md
+        echo "- Kernel: $(uname -r)" >> system_info.md
+        echo "- Optimal block size: $(cat optimal_block_size.txt) bytes" >> system_info.md
+
+    - name: Update README with system info
+      run: |
+        cat system_info.md >> README.md
+        echo "" >> README.md
+        
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
