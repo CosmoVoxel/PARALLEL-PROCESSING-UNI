@@ -4,98 +4,62 @@
 #include <stdbool.h>
 #include <string.h>
 #include <time.h>
-#include <unistd.h>
-#include <fcntl.h>
 
-int main(int argc, char *argv[]) {
-    int m = 2;
-    int n = 100000000; // Default values
-    int block_size = 98304; // Default block size
-    
-    // Parse command line arguments if provided
-    if (argc >= 2) {
-        m = atoi(argv[1]);
-    }
-    if (argc >= 3) {
-        n = atoi(argv[2]);
-    }
-    if (argc >= 4) {
-        block_size = atoi(argv[3]);
-    } else {
-        // Try to read optimal block size from file if exists
-        FILE* file = fopen("optimal_block_size.txt", "r");
-        if (file != NULL) {
-            fscanf(file, "%d", &block_size);
-            fclose(file);
-        }
-    }
-
+// Test sieve performance with a specific block size
+void test_block_size(int block_size, int m, int n) {
     int size = n - m + 1;
-
-    // Allocate and initialize result array
     bool* result = (bool*)malloc(size * sizeof(bool));
     memset(result, true, size * sizeof(bool));
-
+    
     int root = sqrt(n) + 1;
-
-    // Allocate and initialize primeArray
     bool* primeArray = (bool*)malloc((root + 1) * sizeof(bool));
     memset(primeArray, true, (root + 1) * sizeof(bool));
-
-    clock_t startTime = clock();
     
     // First sieve: mark non-primes up to sqrt(n)
     for (int i = 2; i * i <= root; i++) {
-        if (primeArray[i] == true) {
+        if (primeArray[i]) {
             for (int j = i * i; j <= root; j += i) {
                 primeArray[j] = false;
             }
         }
     }
-
-    // Process in blocks to improve cache locality
+    
+    clock_t startTime = clock();
+    
+    // Process in blocks of the specified size
     for (int blockStart = m; blockStart <= n; blockStart += block_size) {
-        // Calculate the size of the current block
         int blockEnd = (blockStart + block_size - 1 < n) ? blockStart + block_size - 1 : n;
         
-        // Allocate and initialize the block's sieve result array
         bool* block = (bool*)malloc((blockEnd - blockStart + 1) * sizeof(bool));
         memset(block, true, (blockEnd - blockStart + 1) * sizeof(bool));
-
-        // Mark non-primes in the current block
+        
         for (int i = 2; i <= root; i++) {
             if (primeArray[i]) {
-                // Calculate the first multiple of i within the block
                 int firstMultiple = (blockStart / i) * i;
                 if (firstMultiple < blockStart) {
                     firstMultiple += i;
                 }
-
-                // Ensure the first multiple is not smaller than i*i
                 if (firstMultiple == i) {
                     firstMultiple = i * i;
                 }
-
-                // Mark multiples of i in the current block
+                
                 for (int j = firstMultiple; j <= blockEnd; j += i) {
                     block[j - blockStart] = false;
                 }
             }
         }
-
-        // Copy block results into the main result array
+        
         for (int i = blockStart; i <= blockEnd; i++) {
             result[i - m] = block[i - blockStart];
         }
-
-        // Free block memory after processing
+        
         free(block);
     }
-
+    
     clock_t endTime = clock();
     double timeTaken = ((double)(endTime - startTime)) / CLOCKS_PER_SEC;
-
-    // Count primes instead of printing them
+    
+    // Count primes
     int primeCount = 0;
     for (int i = 0; i < size; i++) {
         if (result[i] && (i + m) >= 2) {
@@ -103,11 +67,36 @@ int main(int argc, char *argv[]) {
         }
     }
     
-    printf("Found %d primes in the range [%d, %d] with block size %d\n", primeCount, m, n, block_size);
-    printf("Time taken to find primes: %f seconds\n", timeTaken);
-    printf("Performance: %.3f Mnums/sec\n", (double)size / timeTaken / 1000000);
-
-    // Free allocated memory
+    double performance = (double)size / timeTaken / 1000000;
+    
+    // Format output for easy parsing
+    printf("BLOCK_SIZE=%d\n", block_size);
+    printf("TIME=%.6f\n", timeTaken);
+    printf("PERFORMANCE=%.3f\n", performance);
+    printf("PRIMES=%d\n", primeCount);
+    
     free(result);
     free(primeArray);
+}
+
+int main(int argc, char *argv[]) {
+    int block_size = 49152;  // Default block size
+    int m = 2;               // Default range start
+    int n = 100000000;       // Default range end
+    
+    // Parse command line arguments if provided
+    if (argc >= 2) {
+        block_size = atoi(argv[1]);
+    }
+    if (argc >= 3) {
+        m = atoi(argv[2]);
+    }
+    if (argc >= 4) {
+        n = atoi(argv[3]);
+    }
+    
+    // Test the specified block size
+    test_block_size(block_size, m, n);
+    
+    return 0;
 }

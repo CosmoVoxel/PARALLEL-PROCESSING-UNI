@@ -1,5 +1,3 @@
-# PARALLEL-PROCESSING-UNI
-
 ## System Specification
 - CPU: Intel Core i5-11400F
 - 6 cores, 12 threads

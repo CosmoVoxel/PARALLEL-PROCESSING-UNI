@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 {
     int m = 2;
     int n = 100000000; // Default values
+    int block_size = 524288; // Default block size
     
     // Parse command line arguments if provided
     if (argc >= 2) {
@@ -17,6 +18,16 @@ int main(int argc, char *argv[])
     }
     if (argc >= 3) {
         n = atoi(argv[2]);
+    }
+    if (argc >= 4) {
+        block_size = atoi(argv[3]);
+    } else {
+        // Try to read optimal block size from file if exists
+        FILE* file = fopen("optimal_block_size.txt", "r");
+        if (file != NULL) {
+            fscanf(file, "%d", &block_size);
+            fclose(file);
+        }
     }
 
     int size = n - m + 1;
@@ -43,18 +54,16 @@ int main(int argc, char *argv[])
     }
 
     // Block-based approach for better cache locality
-    // Based on analysis from blockLen file, a blockSize of 49152 seems optimal
-    int blockSize = 49152;
-    int numberOfBlocks = (n - m) / blockSize;
-    if ((n - m) % blockSize != 0) {
+    int numberOfBlocks = (n - m) / block_size;
+    if ((n - m) % block_size != 0) {
         numberOfBlocks++;
     }
     
     // Mark non-primes in blocks using parallel processing
     #pragma omp parallel for schedule(dynamic)
     for (int i = 0; i < numberOfBlocks; i++) {
-        int low = m + i * blockSize;
-        int high = m + i * blockSize + blockSize;
+        int low = m + i * block_size;
+        int high = m + i * block_size + block_size;
         if (high > n) {
             high = n;
         }
@@ -91,7 +100,7 @@ int main(int argc, char *argv[])
     }
     
     // Print results and timing information
-    printf("Found %d primes in the range [%d, %d]\n", primeCount, m, n);
+    printf("Found %d primes in the range [%d, %d] with block size %d\n", primeCount, m, n, block_size);
     printf("Time taken: %f seconds\n", timeTaken);
     printf("Performance: %.3f Mnums/sec\n", (double)size / timeTaken / 1000000);
     
