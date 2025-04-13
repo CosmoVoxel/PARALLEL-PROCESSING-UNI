@@ -1,5 +1,10 @@
 # PARALLEL-PROCESSING-UNI
 
+## System Specification
+- CPU: Intel Core i5-11400F
+- 6 cores, 12 threads
+- Base Frequency: 2.6 GHz, Turbo Boost up to 4.4 GHz
+
 ## Cache-Optimized Block Size
 The optimal block size for this CPU was determined to be **262144 bytes**.
 This was calculated by running performance tests across various block sizes aligned with the CPU's cache hierarchy.
@@ -9,12 +14,12 @@ This was calculated by running performance tests across various block sizes alig
 
 | Implementation | [2, 100000000] | [50000001, 100000000] | [2, 50000000] |
 |----------------|-----------|--------------|-------------|
-| prime1 | 131.206 | 137.659 | 146.693 |
-| prime3 | 125.690 | 133.679 | 138.633 |
-| prime3a | 156.751 | 157.097 | 159.478 |
-| prime4 | 71.170 | 79.116 | 79.960 |
-| prime4a | 66.884 | 69.138 | 71.554 |
-| prime5 | 131.597 | 128.212 | 134.459 |
+| prime1 | 137.292 | 146.134 | 153.799 |
+| prime3 | 129.042 | 134.886 | 142.472 |
+| prime3a | 157.340 | 157.716 | 160.272 |
+| prime4 | 73.406 | 80.229 | 83.021 |
+| prime4a | 67.021 | 70.198 | 72.310 |
+| prime5 | 131.521 | 128.228 | 134.455 |
 
 ## Implementation Notes
 
@@ -40,7 +45,7 @@ The `test_ranges.sh` script automatically uses the optimal block size for block-
 ./test_ranges.sh
 ```
 ## Test Environment
-- Date: Sat Apr 12 18:44:41 UTC 2025
+- Date: Sun Apr 13 02:40:03 UTC 2025
 - CPU Model: AMD EPYC 7763 64-Core Processor
 - CPU Cores: 4
 - Memory: 15Gi
