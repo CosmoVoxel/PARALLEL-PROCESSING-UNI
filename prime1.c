@@ -33,6 +33,7 @@ int main(int argc, char *argv[]) {
         if (primeArray[i]) {
             for (int j = i * i; j < sqrtN; j += i) {
                 primeArray[j] = false;
+                break;
             }
         }
     }
