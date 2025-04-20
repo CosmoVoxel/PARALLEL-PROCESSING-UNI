@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
     // Mark non-primes in [m, n] using parallel processing
     // Using schedule(dynamic) for load balancing as larger primes have less multiples
-    #pragma omp parallel for schedule(dynamic)
+    #pragma omp parallel for schedule(runtime)
     for (int i = 2; i <= root; i++) {
         if (primeArray[i]) {
             int firstMultiple = (m / i);

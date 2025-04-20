@@ -4,11 +4,12 @@
 #include <math.h>
 #include <stdbool.h>
 #include <time.h>
+#include <omp.h>
 
 int main(int argc, char *argv[])
 {
     int m = 2, n = 100000000; // Default values
-    int block_size = -1;
+    int block_size = 262144;
     // Parse command line arguments if provided
     if (argc >= 2)
     {
@@ -17,10 +18,6 @@ int main(int argc, char *argv[])
     if (argc >= 3)
     {
         n = atoi(argv[2]);
-    }
-    if (argc >= 4)
-    {
-        block_size = atoi(argv[4]);
     }
 
     int rangeSize = n - m + 1;
@@ -46,7 +43,7 @@ int main(int argc, char *argv[])
     }
 
     // Mark non-primes in the range [m, n]
-    #pragma omp for schedule(block_size > 0 ? static, block_size : dynamic)
+    #pragma omp for schedule(runtime)
     for (int i = 2; i < sqrtN; i++)
     {
         if (primeArray[i])

@@ -10,7 +10,7 @@
 int main(int argc, char *argv[]) {
     int m = 2;
     int n = 100000000; // Default values
-    int block_size = 98304; // Default block size
+    int block_size = 262144; // Default block size
     
     // Parse command line arguments if provided
     if (argc >= 2) {
@@ -18,16 +18,6 @@ int main(int argc, char *argv[]) {
     }
     if (argc >= 3) {
         n = atoi(argv[2]);
-    }
-    if (argc >= 4) {
-        block_size = atoi(argv[3]);
-    } else {
-        // Try to read optimal block size from file if exists
-        FILE* file = fopen("optimal_block_size.txt", "r");
-        if (file != NULL) {
-            fscanf(file, "%d", &block_size);
-            fclose(file);
-        }
     }
 
     int size = n - m + 1;

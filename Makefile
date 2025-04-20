@@ -8,7 +8,7 @@ BUILD_DIR = build
 $(shell mkdir -p $(BUILD_DIR))
 
 # Default target
-all: clean build run
+all: clean build 
 
 # Build all executables
 build: prime1 prime2 prime3 prime3a prime4 prime4a prime5 test_block
