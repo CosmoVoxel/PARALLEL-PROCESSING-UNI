@@ -83,6 +83,12 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add README.md range_results.txt block_size_results.txt optimal_block_size.txt
         git commit -m "Update performance metrics [skip ci]"
+
+    - name: Pull latest changes
+      run: |
+        git fetch origin main
+        git reset --hard origin/main
+      # IHIIHI
     
     - name: Push changes
       uses: ad-m/github-push-action@master
