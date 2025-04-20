@@ -1,0 +1,578 @@
+[
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 5761455,
+        "time_reported": 0.761101,
+        "performance_mnums_sec": 131.389,
+        "wall_clock_time": 0.861339807510376
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 5761455,
+        "time_reported": 0.628887,
+        "performance_mnums_sec": 159.011,
+        "wall_clock_time": 0.7312657833099365
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 5761455,
+        "time_reported": 0.639639,
+        "performance_mnums_sec": 156.338,
+        "wall_clock_time": 0.7390048503875732
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 5761455,
+        "time_reported": 0.683587,
+        "performance_mnums_sec": 146.287,
+        "wall_clock_time": 0.7832353115081787
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 2760321,
+        "time_reported": 0.305804,
+        "performance_mnums_sec": 163.503,
+        "wall_clock_time": 0.35199618339538574
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 2760321,
+        "time_reported": 0.293412,
+        "performance_mnums_sec": 170.409,
+        "wall_clock_time": 0.3401920795440674
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 2760321,
+        "time_reported": 0.292557,
+        "performance_mnums_sec": 170.907,
+        "wall_clock_time": 0.33852434158325195
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 2760321,
+        "time_reported": 0.296381,
+        "performance_mnums_sec": 168.702,
+        "wall_clock_time": 0.34270358085632324
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 3001134,
+        "time_reported": 0.277583,
+        "performance_mnums_sec": 180.126,
+        "wall_clock_time": 0.33084988594055176
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 3001134,
+        "time_reported": 0.294854,
+        "performance_mnums_sec": 169.575,
+        "wall_clock_time": 0.34341883659362793
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 3001134,
+        "time_reported": 0.349345,
+        "performance_mnums_sec": 143.125,
+        "wall_clock_time": 0.4010756015777588
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 3001134,
+        "time_reported": 0.368993,
+        "performance_mnums_sec": 135.504,
+        "wall_clock_time": 0.4269881248474121
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 5761455,
+        "time_reported": 1.847175,
+        "performance_mnums_sec": 54.137,
+        "wall_clock_time": 0.7685027122497559
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 5761455,
+        "time_reported": 4.7721,
+        "performance_mnums_sec": 20.955,
+        "wall_clock_time": 0.5423285961151123
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 5761455,
+        "time_reported": 1.963773,
+        "performance_mnums_sec": 50.922,
+        "wall_clock_time": 0.7773952484130859
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 5761455,
+        "time_reported": 1.950279,
+        "performance_mnums_sec": 51.275,
+        "wall_clock_time": 0.8013370037078857
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 2760321,
+        "time_reported": 0.875782,
+        "performance_mnums_sec": 57.092,
+        "wall_clock_time": 0.35910463333129883
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 2760321,
+        "time_reported": 1.8592,
+        "performance_mnums_sec": 26.893,
+        "wall_clock_time": 0.2363605499267578
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 2760321,
+        "time_reported": 1.119021,
+        "performance_mnums_sec": 44.682,
+        "wall_clock_time": 0.37926530838012695
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 2760321,
+        "time_reported": 0.982928,
+        "performance_mnums_sec": 50.868,
+        "wall_clock_time": 0.3672032356262207
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 3001134,
+        "time_reported": 1.075815,
+        "performance_mnums_sec": 46.476,
+        "wall_clock_time": 0.40731072425842285
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 3001134,
+        "time_reported": 1.867963,
+        "performance_mnums_sec": 26.767,
+        "wall_clock_time": 0.21788716316223145
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 3001134,
+        "time_reported": 1.104964,
+        "performance_mnums_sec": 45.25,
+        "wall_clock_time": 0.43514013290405273
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 3001134,
+        "time_reported": 1.262504,
+        "performance_mnums_sec": 39.604,
+        "wall_clock_time": 0.4495065212249756
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 5761455,
+        "time_reported": 1.820572,
+        "performance_mnums_sec": 54.928,
+        "wall_clock_time": 0.8327829837799072
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 5761455,
+        "time_reported": 2.8205,
+        "performance_mnums_sec": 35.455,
+        "wall_clock_time": 0.345919132232666
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 5761455,
+        "time_reported": 1.719675,
+        "performance_mnums_sec": 58.151,
+        "wall_clock_time": 0.7363080978393555
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 5761455,
+        "time_reported": 1.736446,
+        "performance_mnums_sec": 57.589,
+        "wall_clock_time": 0.7583692073822021
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 2760321,
+        "time_reported": 1.054786,
+        "performance_mnums_sec": 47.403,
+        "wall_clock_time": 0.37654733657836914
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 2760321,
+        "time_reported": 1.713975,
+        "performance_mnums_sec": 29.172,
+        "wall_clock_time": 0.201521635055542
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 2760321,
+        "time_reported": 0.999975,
+        "performance_mnums_sec": 50.001,
+        "wall_clock_time": 0.37727832794189453
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 2760321,
+        "time_reported": 0.882281,
+        "performance_mnums_sec": 56.671,
+        "wall_clock_time": 0.3699989318847656
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 3001134,
+        "time_reported": 0.864562,
+        "performance_mnums_sec": 57.833,
+        "wall_clock_time": 0.35349583625793457
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 3001134,
+        "time_reported": 1.301331,
+        "performance_mnums_sec": 38.422,
+        "wall_clock_time": 0.17368865013122559
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 3001134,
+        "time_reported": 1.02278,
+        "performance_mnums_sec": 48.886,
+        "wall_clock_time": 0.4007573127746582
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 3001134,
+        "time_reported": 0.852494,
+        "performance_mnums_sec": 58.651,
+        "wall_clock_time": 0.3657243251800537
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 5761455,
+        "time_reported": 0.353483,
+        "performance_mnums_sec": 282.899,
+        "wall_clock_time": 0.14523887634277344
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 5761455,
+        "time_reported": 0.205087,
+        "performance_mnums_sec": 487.598,
+        "wall_clock_time": 0.12819361686706543
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 5761455,
+        "time_reported": 0.224173,
+        "performance_mnums_sec": 446.084,
+        "wall_clock_time": 0.12655925750732422
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 5761455,
+        "time_reported": 0.265517,
+        "performance_mnums_sec": 376.624,
+        "wall_clock_time": 0.1223900318145752
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 2760321,
+        "time_reported": 0.172499,
+        "performance_mnums_sec": 289.857,
+        "wall_clock_time": 0.06994295120239258
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 2760321,
+        "time_reported": 0.059762,
+        "performance_mnums_sec": 836.652,
+        "wall_clock_time": 0.0658416748046875
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 2760321,
+        "time_reported": 0.281829,
+        "performance_mnums_sec": 177.413,
+        "wall_clock_time": 0.07943868637084961
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 2760321,
+        "time_reported": 0.19634,
+        "performance_mnums_sec": 254.66,
+        "wall_clock_time": 0.06833052635192871
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 3001134,
+        "time_reported": 0.122203,
+        "performance_mnums_sec": 409.155,
+        "wall_clock_time": 0.06763410568237305
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "dynamic",
+        "prime_count": 3001134,
+        "time_reported": 0.153465,
+        "performance_mnums_sec": 325.807,
+        "wall_clock_time": 0.07298922538757324
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "guided",
+        "prime_count": 3001134,
+        "time_reported": 0.229269,
+        "performance_mnums_sec": 218.084,
+        "wall_clock_time": 0.07839465141296387
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "auto",
+        "prime_count": 3001134,
+        "time_reported": 0.236483,
+        "performance_mnums_sec": 211.432,
+        "wall_clock_time": 0.07824254035949707
+    }
+]

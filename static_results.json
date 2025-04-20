@@ -1,0 +1,254 @@
+[
+    {
+        "executable": "prime1",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 5761455,
+        "time_reported": 3.875997,
+        "performance_mnums_sec": 25.8,
+        "wall_clock_time": 3.9970781803131104
+    },
+    {
+        "executable": "prime1",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 2760321,
+        "time_reported": 2.056794,
+        "performance_mnums_sec": 24.31,
+        "wall_clock_time": 2.1055591106414795
+    },
+    {
+        "executable": "prime1",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 3001134,
+        "time_reported": 1.918189,
+        "performance_mnums_sec": 26.066,
+        "wall_clock_time": 1.971123218536377
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 5761455,
+        "time_reported": 0.667404,
+        "performance_mnums_sec": 149.834,
+        "wall_clock_time": 0.7811617851257324
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 2760321,
+        "time_reported": 0.369781,
+        "performance_mnums_sec": 135.215,
+        "wall_clock_time": 0.4256727695465088
+    },
+    {
+        "executable": "prime2",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 3001134,
+        "time_reported": 0.282802,
+        "performance_mnums_sec": 176.802,
+        "wall_clock_time": 0.33293867111206055
+    },
+    {
+        "executable": "prime3",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 5761455,
+        "time_reported": 0.681316,
+        "performance_mnums_sec": 146.775,
+        "wall_clock_time": 0.7886455059051514
+    },
+    {
+        "executable": "prime3",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 2760321,
+        "time_reported": 0.394774,
+        "performance_mnums_sec": 126.655,
+        "wall_clock_time": 0.44477343559265137
+    },
+    {
+        "executable": "prime3",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 3001134,
+        "time_reported": 0.31657,
+        "performance_mnums_sec": 157.943,
+        "wall_clock_time": 0.3689286708831787
+    },
+    {
+        "executable": "prime3a",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 5761455,
+        "time_reported": 0.127114,
+        "performance_mnums_sec": 786.695,
+        "wall_clock_time": 0.2357006072998047
+    },
+    {
+        "executable": "prime3a",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 2760321,
+        "time_reported": 0.063398,
+        "performance_mnums_sec": 788.668,
+        "wall_clock_time": 0.11355757713317871
+    },
+    {
+        "executable": "prime3a",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": null,
+        "prime_count": 3001134,
+        "time_reported": 0.062061,
+        "performance_mnums_sec": 805.659,
+        "wall_clock_time": 0.11601114273071289
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 5761455,
+        "time_reported": 1.654698,
+        "performance_mnums_sec": 60.434,
+        "wall_clock_time": 0.7012779712677002
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 2760321,
+        "time_reported": 1.051099,
+        "performance_mnums_sec": 47.569,
+        "wall_clock_time": 0.35394978523254395
+    },
+    {
+        "executable": "prime4",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 3001134,
+        "time_reported": 0.923716,
+        "performance_mnums_sec": 54.129,
+        "wall_clock_time": 0.3364419937133789
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 5761455,
+        "time_reported": 1.719721,
+        "performance_mnums_sec": 58.149,
+        "wall_clock_time": 0.7436521053314209
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 2760321,
+        "time_reported": 0.836448,
+        "performance_mnums_sec": 59.777,
+        "wall_clock_time": 0.33946871757507324
+    },
+    {
+        "executable": "prime4a",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 3001134,
+        "time_reported": 0.835892,
+        "performance_mnums_sec": 59.816,
+        "wall_clock_time": 0.3487281799316406
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 5761455,
+        "time_reported": 0.237399,
+        "performance_mnums_sec": 421.232,
+        "wall_clock_time": 0.12302637100219727
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            50000000,
+            100000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 2760321,
+        "time_reported": 0.139228,
+        "performance_mnums_sec": 359.123,
+        "wall_clock_time": 0.0765995979309082
+    },
+    {
+        "executable": "prime5",
+        "range": [
+            2,
+            50000000
+        ],
+        "omp_schedule": "static",
+        "prime_count": 3001134,
+        "time_reported": 0.177904,
+        "performance_mnums_sec": 281.05,
+        "wall_clock_time": 0.07293009757995605
+    }
+]
