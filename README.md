@@ -9,12 +9,12 @@ This was calculated by running performance tests across various block sizes alig
 
 | Implementation | [2, 100000000] | [50000001, 100000000] | [2, 50000000] |
 |----------------|-----------|--------------|-------------|
-| prime1 | 131.206 | 137.659 | 146.693 |
-| prime3 | 125.690 | 133.679 | 138.633 |
-| prime3a | 156.751 | 157.097 | 159.478 |
-| prime4 | 71.170 | 79.116 | 79.960 |
-| prime4a | 66.884 | 69.138 | 71.554 |
-| prime5 | 131.597 | 128.212 | 134.459 |
+| prime1 | 132.931 | 145.350 | 146.781 |
+| prime3 | 126.951 | 136.570 | 138.374 |
+| prime3a | 157.552 | 156.825 | 159.910 |
+| prime4 | 70.946 | 77.322 | 80.065 |
+| prime4a | 65.717 | 68.036 | 70.434 |
+| prime5 | 131.988 | 128.505 | 134.990 |
 
 ## Implementation Notes
 
@@ -40,7 +40,7 @@ The `test_ranges.sh` script automatically uses the optimal block size for block-
 ./test_ranges.sh
 ```
 ## Test Environment
-- Date: Sat Apr 12 18:44:41 UTC 2025
+- Date: Sun Apr 20 01:17:58 UTC 2025
 - CPU Model: AMD EPYC 7763 64-Core Processor
 - CPU Cores: 4
 - Memory: 15Gi
