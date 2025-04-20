@@ -14,48 +14,51 @@ void test_block_size(int block_size, int m, int n) {
     int root = sqrt(n) + 1;
     bool* primeArray = (bool*)malloc((root + 1) * sizeof(bool));
     memset(primeArray, true, (root + 1) * sizeof(bool));
-
     
     clock_t startTime = clock();
 
     // First sieve: mark non-primes up to sqrt(n)
-    for (int i = 2; i * i <= root; i++) {
-        if (primeArray[i]) {
-            for (int j = i * i; j <= root; j += i) {
+    for (int i = 2; i*i*i*i <= n; i++) {
+        if (primeArray[i] == true) {
+            for (int j = i*i; j*j <= n; j+=i) {
                 primeArray[j] = false;
             }
         }
     }
+
+    // Block-based approach for better cache locality
+    int numberOfBlocks = (n - m) / block_size;
+    if ((n - m) % block_size != 0) {
+        numberOfBlocks++;
+    }
     
-    
-    // Process in blocks of the specified size
-    for (int blockStart = m; blockStart <= n; blockStart += block_size) {
-        int blockEnd = (blockStart + block_size - 1 < n) ? blockStart + block_size - 1 : n;
+    // Mark non-primes in blocks using parallel processing
+    #pragma omp parallel for schedule(runtime)
+    for (int i = 0; i < numberOfBlocks; i++) {
+        int low = m + i * block_size;
+        int high = m + i * block_size + block_size;
+        if (high > n) {
+            high = n;
+        }
         
-        bool* block = (bool*)malloc((blockEnd - blockStart + 1) * sizeof(bool));
-        memset(block, true, (blockEnd - blockStart + 1) * sizeof(bool));
-        
-        for (int i = 2; i <= root; i++) {
-            if (primeArray[i]) {
-                int firstMultiple = (blockStart / i) * i;
-                if (firstMultiple < blockStart) {
-                    firstMultiple += i;
+        for (int j = 2; j * j <= high; j++) {
+            if (primeArray[j]) {
+                int firstMultiple = (low / j);
+                if (firstMultiple <= 1) {
+                    firstMultiple = j + j;
                 }
-                if (firstMultiple == i) {
-                    firstMultiple = i * i;
+                else if (low % j) {
+                    firstMultiple = (firstMultiple * j) + j;
+                }
+                else {
+                    firstMultiple = (firstMultiple * j);
                 }
                 
-                for (int j = firstMultiple; j <= blockEnd; j += i) {
-                    block[j - blockStart] = false;
+                for (int k = firstMultiple; k <= high; k += j) {
+                    result[k - m] = false;
                 }
             }
         }
-        
-        for (int i = blockStart; i <= blockEnd; i++) {
-            result[i - m] = block[i - blockStart];
-        }
-        
-        free(block);
     }
     
     clock_t endTime = clock();

@@ -1,0 +1,13 @@
+# Block Size Testing Results
+# Each result is an average of 3 runs
+# Format: block_size time_in_seconds performance_in_Mnums_per_sec
+
+16384 .449686 224.461
+32768 .394324 254.078
+49152 .456003 220.625
+65536 .429979 237.140
+98304 .341792 294.111
+131072 .354681 283.898
+262144 .350989 289.274
+524288 .454105 221.403
+1048576 .763096 131.105
