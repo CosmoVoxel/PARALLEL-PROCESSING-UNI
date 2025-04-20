@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     int m = 2;
     int n = 100000000; // Default values
-    int block_size = 262144; // Default block size
+    int block_size = 98304; // Default block size
     
     // Parse command line arguments if provided
     if (argc >= 2) {
@@ -49,8 +49,10 @@ int main(int argc, char *argv[])
         numberOfBlocks++;
     }
     
+
+
     // Mark non-primes in blocks using parallel processing
-    #pragma omp parallel for schedule(runtime)
+    #pragma omp parallel for schedule(guided)
     for (int i = 0; i < numberOfBlocks; i++) {
         int low = m + i * block_size;
         int high = m + i * block_size + block_size;

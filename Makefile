@@ -1,6 +1,6 @@
 # Configuration
 CC = gcc
-CFLAGS = -lm -Wall -O3 
+CFLAGS = -lm -O3
 OPENMP_FLAGS = -fopenmp
 BUILD_DIR = build
 
