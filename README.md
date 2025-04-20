@@ -1,10 +1,5 @@
 # PARALLEL-PROCESSING-UNI
 
-## System Specification
-- CPU: Intel Core i5-11400F
-- 6 cores, 12 threads
-- Base Frequency: 2.6 GHz, Turbo Boost up to 4.4 GHz
-
 ## Cache-Optimized Block Size
 The optimal block size for this CPU was determined to be **262144 bytes**.
 This was calculated by running performance tests across various block sizes aligned with the CPU's cache hierarchy.
